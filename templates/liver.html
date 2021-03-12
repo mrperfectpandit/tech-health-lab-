@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Health Lab</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pogo-slider.min.css') }}">
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+	<!-- LOADER -->
+     <!-- <div id="preloader">
+		<div class="loader">
+			<img src="images/preloader.gif" alt="" />
+		</div>
+    </div>end loader -->
+    <!-- END LOADER -->
+	
+	<!-- Start top bar -->
+	<div class="main-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="left-top">
+						<a class="new-btn-d br-2" href="#"><span>Contact Us</span></a>
+						<div class="mail-b"><a href="https://aman.sharmatds1999@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> aman@gmail.com</a></div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="wel-nots">
+						<p>Welcome to Our Health Lab!</p>
+					</div>
+					<div class="right-top">
+						<ul>
+              <li><a href="https://facebook.com/aman.sharmatds/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="https://github.com/mrperfectpandit"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+							<li><a href="https://instagram.com/aman___sharma_____"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/aman-sharma-01b185190"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End top bar -->
+	
+	<!-- Start header -->
+	<header class="top-header">
+		<nav class="navbar header-nav navbar-expand-lg">
+            <div class="container">
+				<a class="navbar-brand" href="/"><img src="../static/images/logo.png" alt="image"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                      <li><a class="nav-link active" href="/">Home</a></li>
+                      <li><a class="nav-link" href="/about">about</a></li>
+                      <li><a class="nav-link" href="/Diabetes">Diabetes</a></li>
+                      <li><a class="nav-link" href="/Cancer">Cancer</a></li>
+                      <li><a class="nav-link" href="/Heart">Heart</a></li>
+                      <li><a class="nav-link" href="/Kidney">Kidney</a></li>
+                      <li><a class="nav-link" href="/Malaria">Malaria</a></li>
+                      <li><a class="nav-link" href="/Pnuemonia">Pneumonia</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+  </header>
+  <!-- end of header -->
+    
+
+    <!-- Mask -->
+
+    <div id="intro" class="container-fluid view ">
+      <h1 class="text-center text-capitalize pt-5">Know your chances of getting Liver Infection in one Click!</h1>
+      <hr class="w-75 mx-auto pt-5">
+      
+      <!-- <h1><p class='typo' >Welcome to Health Lab</p></h1> -->
+      
+      
+      <div class="row mb-5">
+        <div class="col-lg-6 col-md-6 col-12 my-auto">
+          <!-- <img src="../static/images/Diabetes.jpg" class="float-left"> -->
+
+          <div class="ulockd-home-slider">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="pogoSlider" id="js-main-slider">
+                  <div class="pogoSlider-slide" data-transition="fade" data-duration="5000" style="background-image: url(' {{ url_for('static', filename=   'images/gallery-04.jpg   ') }}     ')">
+                    <div class="lbox-caption pogoSlider-slide-element">
+                      <div class="lbox-details">
+                        <h1>Pure Water is the World's First and Foremost Medicine</h1>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image: url(' {{ url_for('static', filename=   'images/1.jpg   ') }}     ')">
+                    <div class="lbox-caption pogoSlider-slide-element">
+                      <div class="lbox-details">
+                        <h1>Life may not be a party we hoped for,but while we're here we should dance.</h1>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image: url(' {{ url_for('static', filename=   'images/liver1.jpg   ') }}     ')">
+                    <div class="lbox-caption pogoSlider-slide-element">
+                      <div class="lbox-details">
+                        <h1>The greatest Wealth is Health.</h1>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                </div><!-- .pogoSlider -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+          <form action="{{ url_for('predict')}}" method="post">
+
+
+            <div class="form-group">
+                <!-- TODO : Year to accept only year date picker -->
+                <label for="age">Age</label>
+                <input class="form-control" type="number" id="age" name="age" required="required" placeholder="Age of the patients">
+            </div>
+  
+            <div class="form-group">
+              <!-- TODO : Year to accept only year date picker -->
+              <label for="Total_Bilirubin">Total_Bilirubin</label>
+              <input class="form-control" type="float" id="Total_Bilirubin" name="Total_Bilirubin" required="required" placeholder="Total Billirubin in mg/dL">
+            </div>
+  
+            <div class="form-group">
+              <label for="Direct_Bilirubin">Direct_Bilirubin</label>
+              <input class="form-control" type="float" step="any" id="Direct_Bilirubin" name="Direct_Bilirubin" required="required" placeholder="Direct_Bilirubin in mg/dl">
+            </div>
+  
+            
+            
+            <div class="form-group">
+              <label for="Alkaline_Phosphotase">Alkaline_Phosphotase</label>
+              <input class="form-control" type="number" id="Alkaline_Phosphotase" name = "Alkaline_Phosphotase" required="required" placeholder="ALP in IU/L" >
+            </div>
+
+            
+
+            <div class="form-group">
+                <label for="Alamine_Aminotransferase">Alamine_Aminotransferase</label>
+                <input class="form-control" type="number" id="Alamine_Aminotransferase" name = "Alamine_Aminotransferase" required="required"placeholder="ALT in IU/L" >
+              </div>
+
+              
+
+              <div class="form-group">
+                <label for="Aspartate_Aminotransferase">Aspartate_Aminotransferase</label>
+                <input class="form-control" type="number" id="Aspartate_Aminotransferase" name = "Aspartate_Aminotransferase" required="required"placeholder="AST in IU/L" >
+              </div>
+
+              <div class="form-group">
+                <label for="Total_Protiens">Total_Protiens</label>
+                <input class="form-control" type = "float "id="Total_Protiens" name = "Total_Protiens"required="required" placeholder="Total Proteins g/dL" >
+              </div>
+
+              <div class="form-group">
+                <label for="Albumin">Albumin</label>
+                <input class="form-control" type = "float "id="Albumin" name = "Albumin"required="required" placeholder="Albumin in g/dL" >
+              </div>
+
+              <div class="form-group">
+                <label for="Albumin_and_Globulin_Ratio">Albumin_and_Globulin_Ratio</label>
+                <input class="form-control" type = "float "id="Albumin_and_Globulin_Ratio" name = "Albumin_and_Globulin_Ratio" required="required"placeholder="A/G ratio" >
+              </div>
+  
+            <div class="form-group">
+              <label for="Male">Gender</label>
+              <select class="form-control" id="Male" name = "Male" required="Male" >
+                <option value="1">Male</option>
+                <option value="0">female</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-danger">Predict</button>
+          </form>
+        </div>
+      </div>
+    </div>
+      <!-- Mask -->
+
+
+	
+	
+	
+
+	<!-- Start Footer -->
+	<footer class="footer-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<p class="footer-company-name">All Rights Reserved. &copy; 2021 </p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+	
+	<a href="#" id="scroll-to-top" class="new-btn-d br-2"><i class="fa fa-angle-up"></i></a>
+
+	<!-- ALL JS FILES -->
+	<script src="{{ url_for ('static' , filename = 'js/jquery.min.js') }}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/popper.min.js') }}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/bootstrap.min.js') }}"></script>
+    <!-- ALL PLUGINS -->
+	<script src="{{ url_for ('static' , filename = 'js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{ url_for ('static' , filename = 'js/jquery.pogo-slider.min.js')}}"></script> 
+	<script src="{{ url_for ('static' , filename = 'js/slider-index.js')}}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/smoothscroll.js')}}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/TweenMax.min.js')}}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/main.js')}}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/owl.carousel.min.js') }}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/form-validator.min.js')}}"></script>
+    <script src="{{ url_for ('static' , filename = 'js/contact-form-script.js')}}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/isotope.min.js')}}"></script>	
+	<script src="{{ url_for ('static' , filename = 'js/images-loded.min.js')}}"></script>	
+    <script src="{{ url_for ('static' , filename = 'js/custom.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Health Lab</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pogo-slider.min.css') }}">
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+	<!-- LOADER -->
+     <!-- <div id="preloader">
+		<div class="loader">
+			<img src="images/preloader.gif" alt="" />
+		</div>
+    </div>end loader -->
+    <!-- END LOADER -->
+	
+	<!-- Start top bar -->
+	<div class="main-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="left-top">
+						<a class="new-btn-d br-2" href="#"><span>Contact Us</span></a>
+						<div class="mail-b"><a href="https://aman.sharmatds1999@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> aman@gmail.com</a></div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="wel-nots">
+						<p>Welcome to Our Health Lab!</p>
+					</div>
+					<div class="right-top">
+						<ul>
+                            <li><a href="https://facebook.com/aman.sharmatds/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="https://github.com/mrperfectpandit"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+							<li><a href="https://instagram.com/aman___sharma_____"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/aman-sharma-01b185190"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End top bar -->
+	
+	<!-- Start header -->
+	<header class="top-header">
+		<nav class="navbar header-nav navbar-expand-lg">
+            <div class="container">
+				<a class="navbar-brand" href="/"><img src="../static/images/logo.png" alt="image"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="/">Home</a></li>
+                        <li><a class="nav-link" href="/about">about</a></li>
+                        <li><a class="nav-link" href="/Diabetes">Diabetes</a></li>
+                        <li><a class="nav-link" href="/Cancer">Cancer</a></li>
+                        <li><a class="nav-link" href="/Heart">Heart</a></li>
+                        <li><a class="nav-link" href="/Liver">Liver</a></li>
+                        <li><a class="nav-link" href="/Malaria">Malaria</a></li>
+                        <li><a class="nav-link" href="/Pneumonia">Pneumonia</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+  </header>
+  <!-- end of header -->
+    
+
+    <!-- Mask -->
+
+    <div id="intro" class="container-fluid view ">
+      <h1 class="text-center text-capitalize pt-5">Know your chances of getting Kidney Disease in one Click!</h1>
+      <hr class="w-75 mx-auto pt-5">
+      
+      
+      
+      <div class="row mb-5">
+        <div class="col-lg-6 col-md-6 col-12 my-auto">
+          <!-- <img src="../static/images/Diabetes.jpg" class="float-left"> -->
+
+          <div class="ulockd-home-slider">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="pogoSlider" id="js-main-slider">
+                  <div class="pogoSlider-slide" data-transition="fade" data-duration="5000" style="background-image: url(' {{ url_for('static', filename=   'images/kidney1.jfif   ') }}     ')">
+                    <div class="lbox-caption pogoSlider-slide-element">
+                      <div class="lbox-details">
+                        <h1>Be Healthy.</h1>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image: url(' {{ url_for('static', filename=   'images/diabetes.jfif   ') }}     ')">
+                    <div class="lbox-caption pogoSlider-slide-element">
+                      <div class="lbox-details">
+                        <h1>Happiness is the highest form of health.</h1>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image: url(' {{ url_for('static', filename=   'images/kidney2.jpg   ') }}     ')">
+                    <div class="lbox-caption pogoSlider-slide-element">
+                      <div class="lbox-details">
+                        <h1>Found missing Part </h1>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                </div><!-- .pogoSlider -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+          <form action="{{ url_for('predict')}}" method="post">
+
+            <div class="form-group">
+                <!-- TODO : Year to accept only year date picker -->
+                <label for="age">Age</label>
+                <input class="form-control" type="number" id="age" name="age" required="required" placeholder="Age in years">
+            </div>
+
+            <div class="form-group">
+                <!-- TODO : Year to accept only year date picker -->
+                <label for="bp">Blood Pressure</label>
+                <input class="form-control" type="float" id="bp" name="bp" required="required" placeholder="in mm/Hg">
+            </div>
+
+            <div class="form-group">
+                <label for="sg">Specific Gravity</label>
+                <input class="form-control" type="float" id="sg" name="sg" required="required" placeholder="sg - (1.005,1.010,1.015,1.020,1.025)">
+            </div>
+
+            <div class="form-group">
+                <label for="al">Specific Gravity</label>
+                <input class="form-control" type="number" id="al" name="al" required="required" placeholder="al - (0,1,2,3,4,5)">
+            </div>
+
+            <div class="form-group">
+                <label for="su">Sugar</label>
+                <input class="form-control" type="number" id="su" name="su" required="required" placeholder="su - (0,1,2,3,4,5)">
+            </div>
+
+            <div class="form-group">
+                <label for="bgr">Blood Glucose Random</label>
+                <input class="form-control" type="float" id="bgr" name="bgr" required="required" placeholder="bgr in mgs/dl">
+            </div>
+
+            <div class="form-group">
+                <label for="bu">Blood Urae</label>
+                <input class="form-control" type="float" id="bu" name="bu" required="required" placeholder="bu in mgs/dl">
+            </div>
+
+            <div class="form-group">
+                <label for="sc">serum creatinine</label>
+                <input class="form-control" type="float" id="sc" name="sc" required="required" placeholder="sc in mgs/dl">
+            </div>
+
+            <div class="form-group">
+                <label for="sod">Sodium</label>
+                <input class="form-control" type="float" id="sod" name="sod" required="required" placeholder="sod in mEq/L">
+            </div>
+
+            <div class="form-group">
+                <label for="pot">Potassium</label>
+                <input class="form-control" type="float" id="pot" name="pot" required="required" placeholder="pot in mEq/L">
+            </div>
+
+            <div class="form-group">
+                <label for="hemo">Hemoglobin</label>
+                <input class="form-control" type="float" id="hemo" name="hemo" required="required" placeholder="hemo in gms">
+            </div>
+
+            <div class="form-group">
+                <label for="pcv">Packed Cell Volume</label>
+                <input class="form-control" type="number" id="pcv" name="pcv" required="required" placeholder="numerical">
+            </div>
+
+            <div class="form-group">
+                <label for="wc">White Blood Cell Count</label>
+                <input class="form-control" type="number" id="wc" name="wc" required="required" placeholder="wc in cells/cumm">
+            </div>
+
+            <div class="form-group">
+                <label for="dummy_pc_normal">Pus cell(pc)</label>
+                <select class="form-control"  id="dummy_pc_normal" name="dummy_pc_normal" required="required" placeholder="normal">
+                    <option value="1">Normal</option>
+                    <option value="0">abnormal</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dummy_pcc_present">Pus cell clumps(pcc)</label>
+                <select class="form-control"  id="dummy_pcc_present" name="dummy_pcc_present" required="required" placeholder="present">
+                    <option value="1">present</option>
+                    <option value="0">notpresent</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dummy_pc_present">Bacteria(ba)</label>
+                <select class="form-control"  id="dummy_pc_present" name="dummy_pc_present" required="required" placeholder="present">
+                    <option value="1">present</option>
+                    <option value="0">notpresent</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dummy_htn_yes">Hypertension(htn)</label>
+                <select class="form-control"  id="dummy_htn_yes" name="dummy_htn_yes" required="required" placeholder="Yes">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dummy_dm_yes">diabetes mellitus(dm)</label>
+                <select class="form-control"  id="dummy_dm_yes" name="dummy_dm_yes" required="required" placeholder="Yes">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dummy_cad_yes">coronary artery disease(cad)</label>
+                <select class="form-control"  id="dummy_cad_yes" name="dummy_cad_yes" required="required" placeholder="Yes">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dummy_appet_poor">Appetite(appet)</label>
+                <select class="form-control"  id="dummy_appet_poor" name="dummy_appet_poor" required="required" placeholder="Poor">
+                    <option value="1">Poor</option>
+                    <option value="0">Good</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dummy_pe_yes">pedal edema(pe))</label>
+                <select class="form-control"  id="dummy_pe_yes" name="dummy_pe_yes" required="required" placeholder="Yes">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dummy_anne_yes">Anemia</label>
+                <select class="form-control"  id="dummy_anne_yes" name="dummy_anne_yes" required="required" placeholder="Yes">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            
+
+
+
+
+
+
+            
+            <button type="submit" class="btn btn-danger">Predict</button>
+          </form>
+        </div>
+      </div>
+    </div>
+      <!-- Mask -->
+
+
+	
+	
+	
+
+	<!-- Start Footer -->
+	<footer class="footer-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">Health Lab</a> Design By : <a href="https://html.design/">html design</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+	
+	<a href="#" id="scroll-to-top" class="new-btn-d br-2"><i class="fa fa-angle-up"></i></a>
+
+	<!-- ALL JS FILES -->
+	<script src="{{ url_for ('static' , filename = 'js/jquery.min.js') }}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/popper.min.js') }}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/bootstrap.min.js') }}"></script>
+    <!-- ALL PLUGINS -->
+	<script src="{{ url_for ('static' , filename = 'js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{ url_for ('static' , filename = 'js/jquery.pogo-slider.min.js')}}"></script> 
+	<script src="{{ url_for ('static' , filename = 'js/slider-index.js')}}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/smoothscroll.js')}}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/TweenMax.min.js')}}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/main.js')}}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/owl.carousel.min.js') }}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/form-validator.min.js')}}"></script>
+    <script src="{{ url_for ('static' , filename = 'js/contact-form-script.js')}}"></script>
+	<script src="{{ url_for ('static' , filename = 'js/isotope.min.js')}}"></script>	
+	<script src="{{ url_for ('static' , filename = 'js/images-loded.min.js')}}"></script>	
+    <script src="{{ url_for ('static' , filename = 'js/custom.js')}}"></script>
+</body>
+</html>
