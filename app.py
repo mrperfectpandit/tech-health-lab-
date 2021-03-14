@@ -155,6 +155,10 @@ def Malaria():
 def Pnuemonia():
     return render_template('Pnuemonia.html')
 
+@app.route("/dashboard")
+def dashboard():
+    return render_template('dashboard.html')
+
 def ValuePredictor(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1,size)
     # diabetes
@@ -224,6 +228,9 @@ def predict():
     
     # my_prediction = result
     # return render_template('resultDiabetes.html', prediction=my_prediction)
+
+
+
 
 
 
