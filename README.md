@@ -25,6 +25,7 @@
   * [Motivation](#Motivation)
   * [Features](#Features)
   * [Samples Pictures or Demo](#Samples-Pictures-or-Demo)
+  * [Video Demo](#Video-Demo)
   * [Installation and run](#Installation-and-run)
   * [Contributing](#Contributing)
   * [Directory Tree](#Directory-Tree)
@@ -63,6 +64,8 @@ This is my final year project, for making this i started to learn different tech
 ![](img/6.jpg)
 ![](img/zoom_0.mp4)
 
+
+## Video_Demo
 [![](img/demo_video_logo.png)](
 https://drive.google.com/file/d/1toVkhpkSo5nT-oQo5Dq65-wTDmgZQNri/view?usp=sharing)
 
@@ -97,18 +100,24 @@ python app.py
 ```
 ├───.ipynb_checkpoints
 ├───.vscode
+├───MODEL_CODE
 ├───datasets
 ├───img
 ├───models
+├───package
 ├───static
+│   ├───app
 │   ├───css
 │   ├───fonts
 │   ├───images
 │   ├───js
-│   └───php
+│   ├───php
+│   └───vendor
 ├───templates
 └───uploads
 ├───app.py
+├───config.json
+├───data.db
 ├───Procfile
 ├───requirements.txt
 ├───tree
