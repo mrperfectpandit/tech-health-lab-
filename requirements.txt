@@ -54,7 +54,7 @@ flake8
 Flask==1.1.1
 fsspec 
 future==0.18.2
-gast==0.3.3
+gast==0.2.2
 gensim==3.8.3
 gevent==1.4.0
 glob2==0.7
@@ -218,11 +218,11 @@ statsmodels==0.12.1
 sympy 
 tables==3.6.1
 tblib 
-tensorboard==2.3.0
+tensorboard==2.0.2
 tensorboard-plugin-wit==1.7.0
 tensorflow==2.0.1
 tensorflow-cpu==2.3.1
-tensorflow-estimator==2.3.0
+tensorflow-estimator==2.0.1
 termcolor==1.1.0
 terminado==0.9.1
 testpath==0.4.4

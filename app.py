@@ -1,17 +1,32 @@
 
 from __future__ import division, print_function
-from flask import Flask, render_template, request,url_for,flash,redirect
+from flask import Flask, render_template, request,url_for,flash,redirect,send_from_directory
 import pickle
 import numpy as np
 import joblib
 from PIL import Image
 
+from flask_restful import Resource, Api
+from package.patient import Patients, Patient
+from package.doctor import Doctors, Doctor
+from package.appointment import Appointments, Appointment
+from package.common import Common
+from package.medication import Medication, Medications
+from package.department import Departments, Department
+from package.nurse import Nurse, Nurses
+from package.room import Room, Rooms
+from package.procedure import Procedure, Procedures 
+from package.prescribes import Prescribes, Prescribe
+from package.undergoes import Undergoess, Undergoes
 
+import json
+import os
 
 # temporary-------------------------------------------------------------
 from tensorflow.keras.applications.imagenet_utils import preprocess_input, decode_predictions
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
+
 import sys
 import os
 import glob
@@ -20,12 +35,36 @@ import numpy as np
 from werkzeug.utils import secure_filename
 
 
+with open('config.json') as data_file:
+    config = json.load(data_file)
 
 
 
-
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba242'
+
+api = Api(app)
+
+api.add_resource(Patients, '/patient')
+api.add_resource(Patient, '/patient/<int:id>')
+api.add_resource(Doctors, '/doctor')
+api.add_resource(Doctor, '/doctor/<int:id>')
+api.add_resource(Appointments, '/appointment')
+api.add_resource(Appointment, '/appointment/<int:id>')
+api.add_resource(Common, '/common')
+api.add_resource(Medications, '/medication')
+api.add_resource(Medication, '/medication/<int:code>')
+api.add_resource(Departments, '/department')
+api.add_resource(Department, '/department/<int:department_id>')
+api.add_resource(Nurses, '/nurse')
+api.add_resource(Nurse, '/nurse/<int:id>')
+api.add_resource(Rooms, '/room')
+api.add_resource(Room, '/room/<int:room_no>')
+api.add_resource(Procedures, '/procedure')
+api.add_resource(Procedure, '/procedure/<int:code>')
+api.add_resource(Prescribes, '/prescribes')
+api.add_resource(Undergoess, '/undergoes')
+
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 # UPLOAD_FOLDER = dir_path + '/uploads'
@@ -33,9 +72,9 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 UPLOAD_FOLDER = 'uploads'
 STATIC_FOLDER = 'static'
 
-model = load_model('models/model111.h5')  #malaria
+model = load_model('models/model_malaria.h5')  #malaria
 model222=load_model("models/my_model.h5") #pneumonia
-
+model_tumor=load_model("models/tumor_prediction.h5") #tumor
 #FOR THE FIRST MODEL
 
 # call model to predict an image malaria
@@ -58,6 +97,25 @@ def api_pneumonia(full_path):
     predicted = model222.predict(data)
     return predicted
 
+# def api_tumor(full_path):
+#     data = image.load_img(full_path, target_size=(50, 50, 3))
+#     data = np.expand_dims(data, axis=0)
+#     data = data * 1.0 / 255
+
+#     #with graph.as_default():
+#     predicted = model_tumor.predict(data)
+#     return predicted
+def api_tumor(full_path):
+    data = image.load_img(full_path, target_size=(224,224, 3))
+    data = image.img_to_array(data)
+    data = np.expand_dims(data, axis=0)
+    data = preprocess_input(data)
+    # data = data * 1.0 / 255
+
+    #with graph.as_default():
+    predicted = model_tumor.predict(data)
+    return predicted
+
 # malaria
 @app.route('/upload_malaria', methods=['POST','GET'])
 def upload_file():
@@ -70,7 +128,8 @@ def upload_file():
             full_name = os.path.join(UPLOAD_FOLDER, file.filename)
             file.save(full_name)
 
-            indices = {0: 'PARASITIC', 1: 'Uninfected', 2: 'Invasive carcinomar', 3: 'Normal'}
+            # indices = {0: 'PARASITIC', 1: 'Uninfected', 2: 'Invasive carcinomar', 3: 'Normal'}
+            indices = {0: 'Uninfected', 1: 'PARASITIC'}
             result = api_malaria(full_name)
             print(result)
 
@@ -86,7 +145,7 @@ def upload_file():
 def upload11_file():
 
     if request.method == 'GET':
-        return render_template('index2.html')
+        return render_template('Pnuemonia.html')
     else:
         try:
             file = request.files['image']
@@ -109,6 +168,30 @@ def upload11_file():
         except:
             flash("Please select the image first !!", "danger")      
             return redirect(url_for("Pnuemonia"))
+
+@app.route('/upload_tumor', methods=['POST','GET'])
+def upload111_file():
+
+    if request.method == 'GET':
+        return render_template('tumor.html')
+    else:
+        try:
+            file = request.files['image']
+            full_name = os.path.join(UPLOAD_FOLDER, file.filename)
+            file.save(full_name)
+
+            # indices = {0: 'PARASITIC', 1: 'Uninfected', 2: 'Invasive carcinomar', 3: 'Normal'}
+            indices = {0: 'not_tumor', 1: 'Tumor'}
+            result = api_tumor(full_name)
+            print(result)
+
+            predicted_class = np.asscalar(np.argmax(result, axis=1))
+            accuracy = round(result[0][predicted_class] * 100, 2)
+            label = indices[predicted_class]
+            return render_template('resulttumor.html', image_file_name = file.filename, label = label, accuracy = accuracy)
+        except:
+            flash("Please select the image first !!", "danger")      
+            return redirect(url_for("tumor"))
 
 
 
@@ -155,9 +238,13 @@ def Malaria():
 def Pnuemonia():
     return render_template('Pnuemonia.html')
 
-@app.route("/dashboard")
-def dashboard():
-    return render_template('dashboard.html')
+@app.route("/tumor")
+def tumor():
+    return render_template('tumor.html')
+
+@app.route('/')
+def index():
+    return app.send_static_file('hospitalmanagement.html')
 
 def ValuePredictor(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1,size)

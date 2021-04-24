@@ -1,0 +1,6 @@
+{
+  "database": "data.db",
+  "port": 5000,
+  "host": "127.0.0.1",
+  "SECRET_KEY" : "5791628bb0b13ce0c676dfde280ba242"
+}
