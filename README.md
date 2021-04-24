@@ -63,8 +63,8 @@ This is my final year project, for making this i started to learn different tech
 ![](img/6.jpg)
 ![](img/zoom_0.mp4)
 
-https://drive.google.com/file/d/1toVkhpkSo5nT-oQo5Dq65-wTDmgZQNri/view?usp=sharing
-![](img/demo_video_logo.png)
+[![](img/demo_video_logo.png)](
+https://drive.google.com/file/d/1toVkhpkSo5nT-oQo5Dq65-wTDmgZQNri/view?usp=sharing)
 
 
 
