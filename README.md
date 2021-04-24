@@ -62,7 +62,8 @@ This is my final year project, for making this i started to learn different tech
 ![](img/5.jpg)
 ![](img/6.jpg)
 ![](img/zoom_0.mp4)
-[![SC2 Video](img/)zoom_0.mp4](https://www.youtube.com/watch?v=--b-9HrKK6w)
+
+[Project_demo_video](img/1.jpg)](https://drive.google.com/file/d/1toVkhpkSo5nT-oQo5Dq65-wTDmgZQNri/view?usp=sharing)
 
 
 
