@@ -50,8 +50,8 @@ This is my final year project, for making this i started to learn different tech
 - Also give guidance to how to cure from diseases. [coming soon]
 - Analysis world wide spread disease. [coming soon]
 - Include various graphs and Charts for better visualization.[coming soon]
-- Appointment section. [coming soon]
-- Tumor detection and Contact Tracing. [coming soon]
+- Appointment section.
+- Tumor detection.
  
 
 ## Samples Pictures or Demo
@@ -60,6 +60,8 @@ This is my final year project, for making this i started to learn different tech
 ![](img/3.jpg)
 ![](img/4.jpg)
 ![](img/5.jpg)
+![](img/6.jpg)
+![](img/zoom_0.mp4)
 
 
 
